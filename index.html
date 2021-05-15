@@ -6,6 +6,11 @@
             body {
                 padding: 20px;
             }
+            .listItem {
+                border: 1px solid black;
+                margin: 10px;
+                text-align: left !important;
+            }
             .listItem:hover {
                 color: red;
                 cursor: pointer;
@@ -25,14 +30,13 @@
     <body>
         <h1>Welcome to Ethan's To Do manager!</h1>
         <hr>
-        <ul id="todo">
-            
-        </ul>
         <form>
             <input autofocus id="task" placeholder="Enter task here" />
             <input type="submit" />
         </form>
-
+        <ul id="todo">
+            
+        </ul>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 document.addEventListener('submit', event => {
@@ -45,7 +49,7 @@
                     if(text == "") return -1;
                     item.setAttribute('id', 'item' + numListItems.toString())
                     item.setAttribute('onclick', 'remove("item' + numListItems.toString() + '")')
-                    item.setAttribute('class', 'listItem')
+                    item.setAttribute('class', 'listItem d-flex justify-content-center')
                     list.appendChild(item);
                     document.getElementById('task').value = '';
                 });
