@@ -6,10 +6,13 @@
             body {
                 padding: 20px;
             }
+            .input {
+                width: 1000px;
+            }
             .listItem {
                 border: 1px solid black;
                 margin: 10px;
-                text-align: left !important;
+                width: 95%;
             }
             .listItem:hover {
                 color: red;
@@ -28,13 +31,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Welcome to Ethan's To Do manager!</h1>
+        <h1 class="d-flex justify-content-center">Ethan's To Do manager!</h1>
         <hr>
-        <form>
-            <input autofocus id="task" placeholder="Enter task here" />
+        <form class="d-flex justify-content-center">
+            <input class="input" autofocus id="task" placeholder="Enter task here" />
             <input type="submit" />
         </form>
-        <ul id="todo">
+        <ul id="todo" class="justify-content-center">
             
         </ul>
         <script>
